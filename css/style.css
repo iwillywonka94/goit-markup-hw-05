@@ -644,13 +644,17 @@ img {
   overflow: auto;
 }
 
-.card-item {
+.card {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-item:hover .allworks-decor-text {
+.card:hover .allworks-decor-text {
+  transform: translateY(0);
+}
+
+.card:focus .allworks-decor-text {
   transform: translateY(0);
 }
 
