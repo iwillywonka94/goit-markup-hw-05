@@ -27,6 +27,10 @@ ul {
   padding: 0;
 }
 
+img {
+  display: block;
+}
+
 .list {
   list-style-type: none;
 }
@@ -83,7 +87,6 @@ ul {
 /* Navbar */
 
 .header-flex {
-  position: relative;
   display: flex;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -105,6 +108,9 @@ ul {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nkey > a:hover,
@@ -122,6 +128,9 @@ ul {
   align-items: center;
   justify-content: center;
   fill: var(--secondary-text-color);
+  transition-property: fill;
+  transition-duration: 2250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -146,6 +155,9 @@ ul {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts a:hover,
@@ -160,8 +172,8 @@ ul {
 .current::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -31px;
+  left: 0;
   width: 100%;
   height: 4px;
   background-color: #2196f3;
@@ -386,6 +398,9 @@ ul {
   align-items: center;
   justify-content: center;
   fill: #afb1b8;
+  transition-property: background-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-team-link:hover,
@@ -411,6 +426,9 @@ ul {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-client-link {
@@ -427,6 +445,9 @@ ul {
 
 .client-decor {
   fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-decor:hover,
@@ -466,6 +487,9 @@ ul {
   font-size: 14px;
   font-style: normal;
   line-height: 1.71;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress a:hover,
@@ -475,6 +499,9 @@ ul {
 
 .adress.office > a {
   color: var(--primary-white-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress.office > a:hover,
@@ -514,6 +541,9 @@ ul {
   justify-content: center;
   fill: var(--primary-white-color);
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-item {
@@ -575,6 +605,9 @@ ul {
   border-radius: 4px;
   padding: 6px 22px;
   border-color: transparent;
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fkey > button:hover,
@@ -585,46 +618,41 @@ ul {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* card 
+/* card */
 
-.card-item {
+.allworks-decor {
   position: relative;
+  overflow: hidden;
 }
 
-.card-text::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color);
-  opacity: 0;
-}
-
-.card-text {
+.allworks-decor-text {
   position: absolute;
   top: 0;
   left: 0;
   padding: 63px 24px;
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: calc(28 / 18);
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: 250ms;
+  overflow: auto;
 }
 
-.card-item:hover .card-text::before {
-  opacity: 0.8;
+.card-item {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-item:hover .card-text.text {
-  opacity: 0.8;
+.card-item:hover .allworks-decor-text {
+  transform: translateY(0);
 }
-
-*/
 
 .allworks {
   display: flex;
